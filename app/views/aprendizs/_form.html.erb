@@ -1,0 +1,48 @@
+<%= form_with(model: aprendiz) do |form| %>
+  <h1>New aprendiz</h1>
+  <% if aprendiz.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(aprendiz.errors.count, "error") %> prohibited this aprendiz from being saved:</h2>
+
+      <ul>
+        <% aprendiz.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :documento, style: "display: block" %>
+    <%= form.text_field :documento %>
+  </div>
+
+  <div>
+    <%= form.label :nombres, style: "display: block" %>
+    <%= form.text_field :nombres %>
+  </div>
+
+  <div>
+    <%= form.label :apellidos, style: "display: block" %>
+    <%= form.text_field :apellidos %>
+  </div>
+
+  <div>
+    <%= form.label :correo, style: "display: block" %>
+    <%= form.text_field :correo %>
+  </div>
+
+  <div>
+    <%= form.label :fecha_nacimiento, style: "display: block" %>
+    <%= form.date_field :fecha_nacimiento %>
+  </div>
+
+  <div>
+    <%= form.label :estado, style: "display: block" %>
+    <%= form.check_box :estado %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
