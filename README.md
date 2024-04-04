@@ -5,7 +5,11 @@ El primer paso es clonar el repositorio.
 
       git clone https://github.com/jfelipeq14/ruby-crud-bootstrap.git
 
-Luego de haber clonado el repositorio lo primero que debes hacer para empezar a trabajar es tener las dependencias al dia, entonces, debes usar
+Luego de haber clonado el repositorio lo primero que debes hacer para empezar a trabajar es ubicarte en la carpeta
+
+      cd ruby-crud-bootstrap
+
+Despues de estar en la carpeta debes tener las dependencias al dia, entonces, debes usar
 
     bundle install
 
