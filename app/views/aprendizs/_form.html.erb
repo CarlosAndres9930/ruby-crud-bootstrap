@@ -1,5 +1,5 @@
 <%= form_with(model: aprendiz) do |form| %>
-  <h1>New aprendiz</h1>
+<div class="container">
   <% if aprendiz.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(aprendiz.errors.count, "error") %> prohibited this aprendiz from being saved:</h2>
@@ -32,12 +32,12 @@
     <%= form.text_field :correo %>
   </div>
 
-  <div>
-    <%= form.label :fecha_nacimiento, style: "display: block" %>
-    <%= form.date_field :fecha_nacimiento %>
+  <div class="form-group">
+    <%= form.label :fecha_nacimiento, class:"form-label" %>
+    <%= form.date_field :fecha_nacimiento, class:"form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :estado, style: "display: block" %>
     <%= form.check_box :estado %>
   </div>
@@ -45,4 +45,5 @@
   <div>
     <%= form.submit %>
   </div>
+</div>
 <% end %>

@@ -3,8 +3,10 @@
 <%= render @aprendiz %>
 
 <div>
-  <%= link_to "Edit this aprendiz", edit_aprendiz_path(@aprendiz) %> |
-  <%= link_to "Back to aprendizs", aprendizs_path %>
+  <%= button_to "Eliminar aprendiz", @aprendiz, method: :delete, class:"btn btn-danger" %>
 
-  <%= button_to "Destroy this aprendiz", @aprendiz, method: :delete %>
+  <%= link_to "Modificar aprendiz", edit_aprendiz_path(@aprendiz), class:"btn btn-warning" %>
+  <br/>
+  <%= link_to "Listado de aprendices", aprendizs_path, class:"btn btn-primary" %>
+
 </div>
